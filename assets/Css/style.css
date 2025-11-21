@@ -1,0 +1,42 @@
+ 
+        /* Your existing zoom animation */
+        @keyframes zoomInOut {
+            0% {
+                transform: scale(1.3);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .hero-zoom {
+            background-image: url('../img/Banner.jpg');
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            animation: zoomInOut 2s ease-in-out forwards;
+        }
+
+        /* Fade-in animation for content */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hidden until zoom ends */
+        .content-hidden {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+            animation-delay: 2s;
+            /* same as zoom duration */
+        }
+   
