@@ -15,17 +15,25 @@
     <!-- Navbar -->
     <nav class="fixed w-full top-0 bg-gray-900 z-50">
         <div class="flex justify-between items-center p-2 md:p-3 ">
+
+            <!-- Logo -->
             <div>
                 <img src="./assets/img/logo.png" alt="logo" class="h-8 w-auto md:ml-6 md:h-14 lg:h-16">
             </div>
+
+            <!-- Call Now -->
             <div>
-                <button
-                    class="bg-black text-white border border-white px-2 py-1 text-[12px] md:px-4 md:py-2 md:text-base lg:px-6 lg:py-2 lg:text-md hover:bg-white hover:text-black transition duration-300">
+                <a href="tel:+9718040965000" class="bg-black text-white border border-white px-2 py-1 text-[12px]
+                      md:px-4 md:py-2 md:text-base lg:px-6 lg:py-2 lg:text-md
+                      hover:bg-white hover:text-black transition duration-300
+                      inline-block text-center">
                     +971 80 40965000
-                </button>
+                </a>
             </div>
+
         </div>
     </nav>
+
 
     <!-- Hero Section -->
     <section class="relative w-full h-screen overflow-hidden">
@@ -241,26 +249,22 @@
 
             <!-- IMAGE 1 -->
             <div class="w-full h-64 md:h-80">
-                <img src="./assets/img/gallery-1.webp" alt="gallery-1"
-                    class="w-full h-full object-cover rounded-xl" />
+                <img src="./assets/img/gallery-1.webp" alt="gallery-1" class="w-full h-full object-cover rounded-xl" />
             </div>
 
             <!-- IMAGE 2 -->
             <div class="w-full h-64 md:h-80">
-                <img src="./assets/img/gallery-2.webp" alt="gallery-2"
-                    class="w-full h-full object-cover rounded-xl" />
+                <img src="./assets/img/gallery-2.webp" alt="gallery-2" class="w-full h-full object-cover rounded-xl" />
             </div>
 
             <!-- IMAGE 3 -->
             <div class="w-full h-64 md:h-80">
-                <img src="./assets/img/gallery-3.webp" alt="gallery-3"
-                    class="w-full h-full object-cover rounded-xl" />
+                <img src="./assets/img/gallery-3.webp" alt="gallery-3" class="w-full h-full object-cover rounded-xl" />
             </div>
 
             <!-- IMAGE 4 -->
             <div class="w-full h-64 md:h-80">
-                <img src="./assets/img/gallery-4.webp" alt="gallery-4"
-                    class="w-full h-full object-cover rounded-xl" />
+                <img src="./assets/img/gallery-4.webp" alt="gallery-4" class="w-full h-full object-cover rounded-xl" />
             </div>
 
         </div>
@@ -653,6 +657,184 @@
     </section>
 
 
+
+    <!-- Icons -->
+
+
+    <!-- Floating Left Icons -->
+    <div id="floatingIcons"
+        class="fixed left-[-10px] top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3 opacity-0 pointer-events-none transition-opacity duration-500">
+
+        <!-- Email Icon -->
+        <button onclick="openModal('ENQUIRE NOW')"
+            class="w-12 h-12 md:w-14 md:h-14 bg-gray-200 rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition">
+            <img src="./assets/img/email.png" class="w-6 h-6 md:w-7 md:h-7" />
+        </button>
+
+        <!-- WhatsApp Icon -->
+        <a href="https://wa.me/9718040965000?text=I%20am%20interested%20in%20Binghatti%20Sky%20Terrace" target="_blank"
+            class="w-12 h-12 md:w-14 md:h-14 bg-gray-200 rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition">
+            <img src="./assets/img/whatsapp.png" class="w-6 h-6 md:w-7 md:h-7" />
+        </a>
+
+        <!-- Call Icon -->
+        <a href="tel:+9718040965000"
+            class="w-12 h-12 md:w-14 md:h-14 bg-gray-200 rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition">
+            <img src="./assets/img/call.png" class="w-6 h-6 md:w-7 md:h-7" />
+        </a>
+
+    </div>
+
+
+
+    <!-- Modal Background -->
+    <div id="enquiryModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden 
+            flex items-center justify-center z-50" onclick="closeModal(event)">
+
+        <!-- Modal Box -->
+        <div class="bg-white rounded-lg p-6 w-11/12 max-w-md shadow-xl relative" onclick="event.stopPropagation()">
+
+            <!-- Close X -->
+            <button onclick="forceClose()" class="absolute top-3 right-3 text-black text-2xl font-bold">
+                ×
+            </button>
+
+            <!-- Modal Title -->
+            <h2 id="modalTitle" class="text-center text-2xl font-extrabold mb-6 text-black">
+                ENQUIRE NOW
+            </h2>
+
+            <!-- Form -->
+            <form class="space-y-4 text-black">
+
+                <input type="text" placeholder="Name" class="w-full border border-gray-400 rounded-md px-4 py-3">
+
+                <input type="email" placeholder="Email" class="w-full border border-gray-400 rounded-md px-4 py-3">
+
+                <!-- Phone Input With Country Code -->
+                <div class="flex items-center border border-gray-400 rounded-md px-4 py-3 gap-2">
+                    <select class="border-none focus:ring-0 bg-transparent max-h-20 overflow-y-auto">
+                        <!-- GCC Countries -->
+                        <option value="+91">🇮🇳 +91</option>
+                        <option value="+971">🇦🇪 +971</option>
+                        <option value="+966">🇸🇦 +966</option>
+                        <option value="+968">🏳️ +968</option> 
+                        <option value="+974">🇶🇦 +974</option>
+                        <option value="+973">🇧🇭 +973</option>
+                        <option value="+965">🇰🇼 +965</option>
+
+                        <!-- South Asia -->
+
+                        <option value="+92">🇵🇰 +92</option>
+                        <option value="+880">🇧🇩 +880</option>
+                        <option value="+94">🇱🇰 +94</option>
+                        <option value="+977">🇳🇵 +977</option>
+
+                        <!-- Popular Countries -->
+                        <option value="+1">🇺🇸 +1</option>
+                        <option value="+1">🇨🇦 +1</option>
+                        <option value="+44">🇬🇧 +44</option>
+                        <option value="+61">🇦🇺 +61</option>
+                        <option value="+64">🇳🇿 +64</option>
+
+                        <!-- Europe -->
+                        <option value="+33">🇫🇷 +33</option>
+                        <option value="+49">🇩🇪 +49</option>
+                        <option value="+39">🇮🇹 +39</option>
+                        <option value="+34">🇪🇸 +34</option>
+                        <option value="+31">🇳🇱 +31</option>
+                        <option value="+47">🇳🇴 +47</option>
+                        <option value="+46">🇸🇪 +46</option>
+                        <option value="+45">🇩🇰 +45</option>
+                        <option value="+41">🇨🇭 +41</option>
+
+                        <!-- Africa -->
+                        <option value="+20">🇪🇬 +20</option>
+                        <option value="+27">🇿🇦 +27</option>
+                        <option value="+254">🇰🇪 +254</option>
+                        <option value="+255">🇹🇿 +255</option>
+                        <option value="+251">🇪🇹 +251</option>
+
+                        <!-- Asia -->
+                        <option value="+86">🇨🇳 +86</option>
+                        <option value="+81">🇯🇵 +81</option>
+                        <option value="+82">🇰🇷 +82</option>
+                        <option value="+65">🇸🇬 +65</option>
+                        <option value="+60">🇲🇾 +60</option>
+                        <option value="+63">🇵🇭 +63</option>
+                        <option value="+62">🇮🇩 +62</option>
+                        <option value="+66">🇹🇭 +66</option>
+                        <option value="+84">🇻🇳 +84</option>
+
+                        <!-- Middle East -->
+                        <option value="+90">🇹🇷 +90</option>
+                        <option value="+98">🇮🇷 +98</option>
+                        <option value="+961">🇱🇧 +961</option>
+                        <option value="+962">🇯🇴 +962</option>
+                        <option value="+963">🇸🇾 +963</option>
+                    </select>
+
+                    <input type="text" placeholder="Phone Number" class="flex-1 outline-none">
+                </div>
+
+                <button type="submit" class="w-full bg-black text-white py-3 rounded-md text-lg font-semibold">
+                    Submit
+                </button>
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        // Show modal with dynamic title
+        function openModal(title = "ENQUIRE NOW") {
+            document.getElementById("modalTitle").innerText = title;
+            document.getElementById("enquiryModal").classList.remove("hidden");
+        }
+
+        // Close when clicking X
+        function forceClose() {
+            document.getElementById("enquiryModal").classList.add("hidden");
+        }
+
+        // Close when clicking outside modal box
+        function closeModal(e) {
+            if (e.target.id === "enquiryModal") {
+                forceClose();
+            }
+        }
+
+        // Auto open after 10 seconds
+        setTimeout(() => {
+            openModal("ENQUIRE NOW");
+        }, 10000);
+
+        // Detect button clicks
+        document.addEventListener("click", function (e) {
+            if (e.target.tagName === "BUTTON") {
+                let label = e.target.innerText.trim();
+                let ignore = ["Submit", "×"]; // ignore modal buttons
+                if (!ignore.includes(label)) {
+                    openModal(label);
+                }
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = scrollTop / docHeight;
+
+            const icons = document.getElementById("floatingIcons");
+
+            if (scrollPercent >= 0.10) {   // show after 10%
+                icons.classList.remove("opacity-0", "pointer-events-none");
+            } else {
+                icons.classList.add("opacity-0", "pointer-events-none");
+            }
+        });
+    </script>
 </body>
 
 </html>
