@@ -15,13 +15,9 @@
     <!-- Navbar -->
     <nav class="fixed w-full top-0 bg-gray-900 z-50">
         <div class="flex justify-between items-center p-2 md:p-3 ">
-
-            <!-- Logo -->
             <div>
                 <img src="./assets/img/logo.png" alt="logo" class="h-8 w-auto md:ml-6 md:h-14 lg:h-16">
             </div>
-
-            <!-- Call Now -->
             <div>
                 <a href="tel:+9718040965000" class="bg-black text-white border border-white px-2 py-1 text-[12px]
                       md:px-4 md:py-2 md:text-base lg:px-6 lg:py-2 lg:text-md
@@ -134,10 +130,11 @@
                     most iconic developers.
                 </p>
 
-                <button data-open-modal="Download Brochure"
-                    class="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition">
+                <button data-open-modal="Download Brochure" class="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition text-center 
+           block mx-auto md:mx-0">
                     Download Brochure
                 </button>
+
             </div>
 
 
@@ -617,7 +614,7 @@
                     alt="Project Video Banner" />
 
                 <!-- Center Play Button -->
-                <button data-open-modal="Enquire Now" class="absolute top-1/2 left-1/2 
+                <button data-open-modal="Virtual Tour" class="absolute top-1/2 left-1/2 
                 -translate-x-1/2 -translate-y-1/2
                 bg-white text-black h-16 w-16 md:h-20 md:w-20 
                 rounded-full flex items-center justify-center shadow-lg
@@ -679,21 +676,21 @@
         class="fixed left-[-10px] top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3 opacity-0 pointer-events-none transition-opacity duration-500">
 
         <!-- Email Icon -->
-        <button onclick="openModal('ENQUIRE NOW')"
+        <a data-open-modal="Enquire Now"
             class="w-12 h-12 md:w-14 md:h-14 bg-gray-200 rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition">
-            <img src="./assets/img/email.png" class="w-6 h-6 md:w-7 md:h-7" />
-        </button>
+            <img src="./assets/img/email.png" class="w-6 h-6 md:w-7 md:h-7" alt="email"/>
+        </a>
 
         <!-- WhatsApp Icon -->
-        <a href="https://wa.me/9718040965000?text=I%20am%20interested%20in%20Binghatti%20Sky%20Terrace" target="_blank"
+        <a href="https://wa.me/9718040965000?text=I%20am%20interested%20in%20Binghatti%20Sky%20Terrace" target="_blank" aria-label="Chat on WhatsApp"
             class="w-12 h-12 md:w-14 md:h-14 bg-gray-200 rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition">
-            <img src="./assets/img/whatsapp.png" class="w-6 h-6 md:w-7 md:h-7" />
+            <img src="./assets/img/whatsapp.png" class="w-6 h-6 md:w-7 md:h-7" alt="whatsapp"/>
         </a>
 
         <!-- Call Icon -->
-        <a href="tel:+9718040965000"
+        <a href="tel:+9718040965000" aria-label="Call us"
             class="w-12 h-12 md:w-14 md:h-14 bg-gray-200 rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition">
-            <img src="./assets/img/call.png" class="w-6 h-6 md:w-7 md:h-7" />
+            <img src="./assets/img/call.png" class="w-6 h-6 md:w-7 md:h-7" alt="call"/>
         </a>
 
     </div>
