@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/Css/style.css">
+
+    <style>
+         .thank-you-text {
+            font-size: 10vw;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 2px;
+            margin: 0;
+
+            /* Light 3D shadow (Fast performance version) */
+            text-shadow:
+                -3px 3px 0 #000,
+                -6px 6px 0 #333,
+                -9px 9px 2px rgba(112, 112, 112, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .thank-you-text {
+                font-size: 15vw;
+            }
+        }
+    </style>
+</head>
+
+<body class="hero-zoom relative">
+
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+
+    <!-- CONTENT -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-screen text-center text-white px-6">
+
+        <!-- Thank You Text -->
+        <h1 class="thank-you-text">
+            Thank you!
+        </h1>
+
+        <p class="mt-6 text-lg md:text-xl font-light tracking-wide">
+           Thank you for submitting the form.
+        </p>
+         <p class="mt-1 text-lg md:text-xl font-light tracking-wide">
+         Your representative will connect with you shortly.
+        </p>
+
+        <button onclick="goBack()"
+            class="mt-10 bg-black/80 backdrop-blur-md text-white px-10 py-3 rounded-md 
+                   text-lg font-semibold hover:bg-black transition shadow-xl">
+            Go Back
+        </button>
+
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = "index.html"; // safer than history.back()
+        }
+    </script>
+
+</body>
+</html>
